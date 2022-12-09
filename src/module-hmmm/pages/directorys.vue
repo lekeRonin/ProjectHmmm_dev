@@ -195,7 +195,7 @@ export default {
         this.localList()
       } catch (error) {
         console.log(error)
-        this.$message.success('删除失败')
+        this.$message.warning('删除失败')
       }
     },
     // 启动和禁用按钮

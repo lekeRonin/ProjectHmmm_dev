@@ -9,7 +9,7 @@
                 <el-input v-model="SearchName"></el-input>
               </el-form-item>
               <el-form-item>
-                <el-button size="small" @click="SearchName = ''">清除</el-button>
+                <el-button size="small" @click="Onclear">清除</el-button>
                 <el-button type="primary" size="small" @click="OnSearch">搜索</el-button>
              </el-form-item>
             </el-form>
@@ -153,11 +153,15 @@ export default {
       this.SubjectsData = data.items
       this.total = data.counts
     },
+    Onclear() {
+      this.SearchName = ''
+      this.localList()
+    },
     async OnSearch () {
       const { data } = await getSubjects({ subjectName: this.SearchName })
       this.SubjectsData = data.items
       this.total = data.counts
-      this.SearchName = ''
+      
     },
     AddSubjects () {
       this.AddDialog = true
@@ -181,7 +185,7 @@ export default {
         this.localList()
       } catch (error) {
         console.log(error)
-        this.$message.success('删除失败')
+        this.$message.warning('删除失败')
       }
     },
     isFrontDisplayData (row, column, cellValue, index) {

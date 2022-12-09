@@ -126,7 +126,7 @@
           </el-col>
 
           <!-- 方向 -->
-          <el-col :span="6">
+          <el-col :span="6"> 
             <el-form-item label="方向">
               <el-select
                 style="width: 100%"

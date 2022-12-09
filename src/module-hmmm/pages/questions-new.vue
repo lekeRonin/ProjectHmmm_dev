@@ -1,5 +1,4 @@
 <template>
-
   <div class="dashboard-container">
     <div class="app-container">
       <el-card shadow="never">
@@ -15,7 +14,7 @@
         </el-form-item>
         <el-form-item label="目录：" prop="catalogID">
             <el-select v-model="testForm.catalogID" placeholder="请选择">
-            <el-option v-for="item in directorysList" :key="item.value"  :label="item.label" :value="item.value"></el-option>
+            <el-option v-for="item in directorysList" :key="item.value"  :label="item.directoryName" :value="item.value"></el-option>
             </el-select>
         </el-form-item>
         <el-form-item label="企业：" prop="enterpriseID">
@@ -127,11 +126,6 @@
   </div>
 </template>
 
-
-
-
-  
-
 <script>
 // 引入富文本编辑器样式
 import 'quill/dist/quill.core.css'
@@ -144,7 +138,7 @@ import uploadImg from '../components/questions-uploadImg.vue'
 // 学科api
 import { getSubjects as sublist } from '@/api/hmmm/subjects'
 // 目录api
-import { simple as direlist } from '@/api/hmmm/directorys'
+import { getDirectorys as direlist } from '@/api/hmmm/directorys'
 // 企业api
 import { list as complist } from '@/api/hmmm/companys'
 // 城市api
@@ -261,7 +255,7 @@ export default {
     // 学科列表
     async subjectList () {
       try {
-        const { data } = await sublist()
+        const { data } = await sublist(this.testForm)
         this.subjectsList = data.items
       } catch (err) { return err }
     },
@@ -270,7 +264,8 @@ export default {
       // console.log(id)
       try {
         const { data } = await direlist({ subjectID: id })
-        this.directorysList = data
+        console.log(data)
+        this.directorysList = data.items
       } catch (err) { return err }
     },
     // 渲染企业管理列表
