@@ -506,13 +506,16 @@ export default {
       ).catch((err) => err);
       // 如果确认删除执行删除逻辑
       if (result === "confirm") {
-        const data = await removeQuestionList(item);
+        const data = await removeQuestionList(item)
         // 如果状态码是200表示删除成功
         if (data.status === 200) {
-          return this.$message.success("删除成功");
+          this.getBaseQuestionList()
+          return this.$message.success("删除成功")
+          
+
         }
+        
       }
-      this.getBaseQuestionList();
     },
 
     //  获取题库列表

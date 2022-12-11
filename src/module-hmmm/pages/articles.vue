@@ -120,7 +120,7 @@
           <el-input v-model="articlesForm.title" placeholder="请输入文章标签"></el-input>
         </el-form-item>
         <el-form-item label="文章标题" prop="articleBody" class="elform">
-          <quill-editor style="margin-left: 0px;" v-model="articlesForm.articleBody" ref="myQuillEditor"> </quill-editor>
+          <quill-editor style="margin-left: 0px; height:180px;" v-model="articlesForm.articleBody" ref="myQuillEditor"> </quill-editor>
         </el-form-item>
         <el-form-item label="视频地址" class="elform">
           <el-input v-model="articlesForm.videoURL" placeholder="请输入视频地址"></el-input>

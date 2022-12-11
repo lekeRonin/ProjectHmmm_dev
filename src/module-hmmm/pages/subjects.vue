@@ -75,7 +75,8 @@
       >
       <template v-slot="{row}">
       <el-button size="mini" type="text" @click="$router.push(`/subjects/directorys?id=${row.id}&name=${row.subjectName}`)">学科分类</el-button>
-      <el-button size="mini" type="text" @click="$router.push(`/subjects/directorys?id=${row.id}?name=${row.subjectName}`)">学科标签</el-button>
+      <!-- <el-button size="mini" type="text" @click="$router.push(`/subjects/directorys?id=${row.id}?name=${row.subjectName}`)">学科标签</el-button> -->
+      <el-button size="mini" type="text" @click="$router.push(`/subjects/tags?id=${row.id}&name=${row.subjectName}`)">学科标签</el-button>
       <el-button size="mini" type="text" @click="OnEdit(row.id)">修改</el-button>
       <el-button size="mini" type="text" @click="OnDel(row.id)">删除</el-button>
       </template>

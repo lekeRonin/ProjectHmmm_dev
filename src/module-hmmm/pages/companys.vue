@@ -55,7 +55,7 @@
             </el-col>
             <!-- 新增用户按钮 -->
             <el-col :span="12" style="text-align:right">
-              <el-button size="small" style="margin-left: 10px;" type="success" icon="el-icon-edit" @click="addUser">新增用户</el-button>
+              <el-button size="small" style="margin-left: 10px;" type="success" icon="el-icon-edit" @click="addUser">新增企业</el-button>
             </el-col>
           </el-row>
         </el-form>
@@ -69,7 +69,7 @@
           <el-table-column align="center" prop="shortName" label="企业简称"> </el-table-column>
           <el-table-column align="center" prop="tags" label="标签"> </el-table-column>
           <el-table-column align="center" prop="creatorID" label="创建者"> </el-table-column>
-          <el-table-column align="center" prop="addDate" label="创建日期"> </el-table-column>
+          <el-table-column align="center" prop="addDate" label="创建日期" width='260px'> </el-table-column>
           <el-table-column align="center" prop="remarks" label="备注"> </el-table-column>
           <el-table-column align="center" prop="state" label="状态">
             <!-- "state === 1 ? ' 启用' : '状态 '" -->
@@ -113,7 +113,7 @@
         >
         </el-pagination>
         <!-- 新增用户弹框 -->
-        <el-dialog title="新增用户" :visible.sync="addDialogVisible" width="50%" @close="closeAdd">
+        <el-dialog title="新增企业" :visible.sync="addDialogVisible" width="50%" @close="closeAdd">
           <el-form :model="addForm" :rules="addFormRules" ref="addFormRef" label-width="120px" class="demo-ruleForm" style="width: 80%; margin-left: 10px;">
             <!-- 企业名称部分 -->
             <el-form-item label="企业名称" prop="shortName">
@@ -151,7 +151,7 @@
         </el-dialog>
       </el-card>
       <!-- 编辑弹框 -->
-      <el-dialog title="编辑用户" :visible.sync="editDialogVisible" width="50%" @close="closeEdit">
+      <el-dialog title="编辑企业" :visible.sync="editDialogVisible" width="50%" @close="closeEdit">
         <el-form :model="editForm" :rules="editFormRules" ref="editFormRef" label-width="120px" class="demo-ruleForm" style="width: 80%; margin-left: 10px;">
           <!-- 企业名称部分 -->
           <el-form-item label="企业名称" prop="shortName">
@@ -264,7 +264,7 @@ export default {
         const { data: res } = await list(this.queryInfo)
         // 赋值之前对时间进行处理
         res.items.forEach(item => {
-          item.addDate = this.$dayjs(item.addDate).format('YYYY-MM-DD')
+          item.addDate = this.$dayjs(item.addDate).format('YYYY-MM-DD hh:mm:ss')
         })
         this.companyTableData = res.items
         this.counts = res.counts

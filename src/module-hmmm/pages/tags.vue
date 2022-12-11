@@ -122,16 +122,18 @@ export default {
         pagesize: 10,
         total: 0
       },
-      tableData: []
+      tableData: [],
+      id: this.$route.query.id, // 学科传递过来的数据
+      name: this.$route.query.name
     }
   },
   computed: {
-    id () {
-      return this.$route.query.id
-    },
-    name () {
-      return this.$route.query.name
-    }
+    // id () {
+    //   return this.$route.query.id
+    // },
+    // name () {
+    //   return this.$route.query.name
+    // }
   },
   async created () {
     if (this.name) {
@@ -242,7 +244,8 @@ export default {
             this.$message.success('编辑标签成功')
           } else {
             if (this.name) {
-              await addTag({ ...this.tagForm, subjectID: this.id })
+              // await addTag({ ...this.tagForm, subjectID: this.id })
+              await addTag({ tagName:this.tagForm.tagName, subjectID:Number(this.id) })
             } else {
               const subjectID = this.tableData.filter(item => item.subjectName === this.tagForm.subjectName)[0].subjectID
               await addTag({ ...this.tagForm, subjectID })

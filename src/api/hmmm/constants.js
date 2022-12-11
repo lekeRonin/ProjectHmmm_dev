@@ -94,3 +94,162 @@ export const publishType = [
     label: '已下架'
   }
 ]
+
+export const array = [
+  {
+    code: 'A', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'B', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'C', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'D', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'E', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'F', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'G', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'H', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'I', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'J', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'K', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'L', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'M', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'N', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'O', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'P', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'Q', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'R', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'S', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'T', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'U', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'V', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'W', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'X', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'Y', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  },
+  {
+    code: 'Z', // 代码
+    title: '', // 标题
+    img: '', // 图片URL
+    isRight: false // 是否正确答案 true/false
+  }
+]
